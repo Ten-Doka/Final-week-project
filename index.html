@@ -6,25 +6,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <title>Weather App</title>
   </head>
   <body>
     <div class="weather-app">
       <header>
-        <form class="search-input">
+        <form class="search-input" id="search-input">
           <input
             type="search"
             placeholder="Enter a city..."
             required
             class="search-input-city"
+            id="search-input-city"
           />
-          <input type="submit" value="Search" class="search-input-button" />
+          <input
+            type="submit"
+            value="Search"
+            class="search-input-button"
+            id="search-city-button"
+          />
         </form>
       </header>
       <main>
         <div class="city-temperature">
           <div class="city">
-            <h1>Paris</h1>
+            <h1 id="currentCity">Paris</h1>
             <div class="weather-details">
               <span class="day">Saturday </span>
               <span class="time">19:20</span>,
@@ -36,7 +43,7 @@
           </div>
           <div class="temperature">
             <span class="weather-icon">🌨️</span>
-            <span class="weather-degree">-2</span>
+            <span class="weather-degree" id="temperature">-2</span>
             <span class="weather-unit">°C</span>
           </div>
         </div>
@@ -65,5 +72,6 @@
         </p>
       </footer>
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
