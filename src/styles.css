@@ -78,7 +78,8 @@ main {
   color: #8f939d;
 }
 
-strong {
+.wind,
+.humidity {
   color: #222f4f;
 }
 
